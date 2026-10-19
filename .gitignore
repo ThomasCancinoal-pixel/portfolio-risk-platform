@@ -1,0 +1,26 @@
+# ===== Entorno virtual (se recrea con requirements.txt) =====
+.venv/
+
+# ===== Cache de Python =====
+__pycache__/
+*.py[cod]
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Datos: se regeneran ejecutando el ETL =====
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.duckdb
+*.duckdb.wal
+
+# ===== Secretos: NUNCA se suben =====
+.env
+.streamlit/secrets.toml
+
+# ===== Sistema y editor =====
+Thumbs.db
+.DS_Store
+.vscode/
