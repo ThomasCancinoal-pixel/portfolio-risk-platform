@@ -27,6 +27,12 @@ DB_PATH = DATA_PROCESSED_DIR / "portfolio.duckdb"         # base de datos (Fase 
 # Mismo inicio que el trabajo de Finanzas II, para poder comparar resultados.
 START_DATE = "2014-01-01"
 
+# Fecha final del análisis (opción A, decidida el 24-10-2026).
+# Yahoo Finance entrega precios CONGELADOS de ENTEL.SN desde el 17-07-2026
+# (verificado contra una fuente chilena: el precio real sí cambió y hubo volumen).
+# Se corta el análisis de TODOS los activos el día anterior, para que todos
+# cubran el mismo periodo con datos confiables.
+ANALYSIS_END_DATE = "2026-07-16"
 # =============================================================================
 # UNIVERSO DE ACTIVOS
 # =============================================================================
